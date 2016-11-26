@@ -16,6 +16,9 @@ add_message_files(DIRECTORY msg
     CartesianQuantity.msg
     CartesianStiffness.msg
     CartesianVelocity.msg
+    CartesianForceQuantity.msg
+    CartesianForce.msg
+    CartesianForceStamped.msg
     JointDamping.msg
     JointPosition.msg
     JointPositionVelocity.msg
@@ -29,6 +32,7 @@ add_message_files(DIRECTORY msg
 add_service_files(DIRECTORY srv
     FILES
     ConfigureSmartServo.srv
+    ConfigureForceOverlay.srv
 )
         
 # Actually generate the language-specific message and service files
