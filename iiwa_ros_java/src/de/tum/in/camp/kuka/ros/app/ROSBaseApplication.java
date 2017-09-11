@@ -110,14 +110,14 @@ public abstract class ROSBaseApplication extends RoboticsAPIApplication {
 		try {
 			URI uri = new URI(Configuration.getMasterURI());
 
-			nodeConfConfiguration = NodeConfiguration.newPublic("172.31.1.147");
+			nodeConfConfiguration = NodeConfiguration.newPublic("192.168.1.2");
 			nodeConfConfiguration.setTimeProvider(Configuration.getTimeProvider());
 			nodeConfConfiguration.setNodeName(Configuration.getRobotName() + "/iiwa_configuration");
 			nodeConfConfiguration.setMasterUri(uri);			
 			nodeConfConfiguration.setTcpRosBindAddress(BindAddress.newPublic(30000));
 			nodeConfConfiguration.setXmlRpcBindAddress(BindAddress.newPublic(30001));			
 			
-			nodeConfPublisher = NodeConfiguration.newPublic("172.31.1.147");
+			nodeConfPublisher = NodeConfiguration.newPublic("192.168.1.2");
 			nodeConfPublisher.setTimeProvider(Configuration.getTimeProvider());
 			nodeConfPublisher.setNodeName(Configuration.getRobotName() + "/iiwa_publisher");
 			nodeConfPublisher.setMasterUri(uri);
